@@ -6,10 +6,12 @@ import StepLabel from '@mui/material/StepLabel';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
+import { FaXmark } from "react-icons/fa6";
 
 const steps = ['Basic Informations', 'Contact Details', 'Educational Details', 'Work Experience', 'Skills & Certificates', 'Review & Submit'];
 
 function UserInputs() {
+  const skillSuggestionArray = ['NODE JS', 'MONGODB', 'EXPRESS JS', 'REACT', 'ANGULAR', 'LEADERSHIP', 'COMMUNICATION', 'COACHING', 'POWER BI', 'MX EXCEL']
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
 
@@ -108,12 +110,39 @@ function UserInputs() {
       case 4: return (
         <div>
           <h3> Skill</h3>
+          <div className='d-flex align-items-center justify-content-between p-3'>
+            <input type="text" placeholder='Add Skill' className='w-100' />
+            <Button variant='text'>ADD</Button>
+          </div>
+          <h5>Suggestions : </h5>
+          <div className="d-flex flex-wrap justify-content-between my-3">
+            {
+              skillSuggestionArray.map((item, index) => (
+                <Button key={index} variant="outlined" className="m-1">
+                  {item}
+                </Button>
+              ))
+            }
+
+          </div>
+          <h5>Added Skill : </h5>
+          <div className="d-flex flex-wrap justify-content-between my-3">
+            <Button variant="contained" className='m-1'>NODE JS <FaXmark className='ms-2 cursor-pointer' /></Button>
+          </div>
+
+          <div>
+
+          </div>
+
         </div>
 
       )
       case 5: return (
         <div>
           <h3> Summary</h3>
+          <div className="p-3 row">
+            <TextField id="standard-basic-summary" label="Write a short summary of your self" variant="standard" multiline rows={7} defaultValue={'Motivated and detail-oriented computer science student with strong knowledge in Python, Django, HTML, CSS, JavaScript, and React. Passionate about building web applications and learning new technologies. Seeking opportunities to apply my skills in real-world projects and contribute to team success.'}/>
+          </div>
         </div>
 
       )
