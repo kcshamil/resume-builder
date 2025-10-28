@@ -73,7 +73,7 @@ function LandingPage() {
           <div className="col-md-6 col-12">
             <div className="row">
               <div className="col-3">
-                <img className='w-100' src="https://assets.livecareer.co.uk/blobimages/lcintl-lp/luk/images/grid/grid1.png" alt="person" />
+                <img className='w-100 h-100' src="https://assets.livecareer.co.uk/blobimages/lcintl-lp/luk/images/grid/grid1.png" alt="person" />
               </div>
               <div className="col-3">
                 <img className='w-100 h-100' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRExrGzPIdL2YHhEapdqN4ZjunwaYOUNv4qRQ&s" alt="person" />
@@ -104,10 +104,10 @@ function LandingPage() {
                 <img className='w-100 h-100' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRCEA-EgV4ocW1dEvqPyYwau7oDdeZSXzKkw&s" alt="person" />
               </div>
               <div className="col-3">
-                <img className='w-100 ' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjX3SOTIfrK1Kt1czaejkmTg6i93_WjzivjdnJPNLO2dttISoDQ3KrFEzrOhCTelV00mY&usqp=CAU" alt="person" />
+                <img className='w-100 h-100' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjX3SOTIfrK1Kt1czaejkmTg6i93_WjzivjdnJPNLO2dttISoDQ3KrFEzrOhCTelV00mY&usqp=CAU" alt="person" />
               </div>
               <div className="col-3">
-                <img className='w-100 ' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDjaC6oZSfhcbXLqWlOFkCNEAE8TINxnPl6g&s" alt="person" />
+                <img className='w-100 h-100' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDjaC6oZSfhcbXLqWlOFkCNEAE8TINxnPl6g&s" alt="person" />
               </div>
               <div className="col-3">
                 <img className='w-100 ' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTQLDneZM4Ymoi7mRUgZD5OF0Y9rDJkpyhOg&s" alt="person" />
