@@ -13,14 +13,14 @@ function ResumeGenerator() {
           <IoDocumentTextOutline  className='text-primary fs-1 mb-3'/>
           <h4>Add your Infromation</h4>
           <p>Add pre-written examples to each section</p>
-          <h5>Step 1</h5>
+          <h5 className='fw-semibold'>Step 1</h5>
         </div>
         <div className='col-md-1'></div>
         <div className='col-md-4 rounded shadow p-5 text-center'>
           <IoIosDownload className='text-danger fs-1 mb-3'/>
           <h4>Download your Resume</h4>
           <p>Download your resume in PDF format</p>
-          <h5>Step 2</h5>
+          <h5 className='fw-semibold'>Step 2</h5>
 
         </div>
         <div className='
