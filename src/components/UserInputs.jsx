@@ -11,33 +11,14 @@ import { duration } from '@mui/material';
 
 const steps = ['Basic Informations', 'Contact Details', 'Educational Details', 'Work Experience', 'Skills & Certificates', 'Review & Submit'];
 
-function UserInputs() {
+function UserInputs({resumeDetails, setResumeDetails}) {
   const skillSuggestionArray = ['NODE JS', 'MONGODB', 'EXPRESS JS', 'REACT', 'ANGULAR', 'LEADERSHIP', 'COMMUNICATION', 'COACHING', 'POWER BI', 'MX EXCEL']
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
 
-  const [resumeDetails, setResumeDetails] = React.useState({
-    username: "",
-    jobTitle: "",
-    location: "",
-    email: "",
-    mobile: "",
-    github: "",
-    linkedin: "",
-    portfolio: "",
-    course: "",
-    college: "",
-    university: "",
-    passoutYear: "",
-    jobType: "",
-    company: "",
-    cLocation: "",
-    duration: "",
-    userSkills: [],
-    summary: ""
-  })
+  
 
-  // 
+  // reference to skill input tag
   const skillRef = React.useRef();
 
   console.log(resumeDetails);
@@ -201,6 +182,16 @@ function UserInputs() {
 
   }
 
+  const handleAddResume = async ()=>{
+    const {username,jobTitle,location} = resumeDetails
+    if(!username && !jobTitle && !location){
+      alert("Please fill the form Completely ....")
+    }else{
+      console.log("API Calll");
+      
+    }
+  }
+
   return (
     <Box sx={{ width: '100%' }}>
       <Stepper activeStep={activeStep}>
@@ -253,9 +244,13 @@ function UserInputs() {
                 Skip
               </Button>
             )}
-            <Button onClick={handleNext}>
-              {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-            </Button>
+             {activeStep === steps.length - 1 ? 
+             <Button onClick={handleAddResume} >Finish</Button>
+             :
+             <Button onClick={handleNext} >Next</Button>
+             }
+            
+            
           </Box>
         </React.Fragment>
       )}
