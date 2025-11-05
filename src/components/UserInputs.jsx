@@ -7,7 +7,12 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import { FaXmark } from "react-icons/fa6";
-import { duration } from '@mui/material';
+// import { duration } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { addresumeAPI } from '../services/allAPI';
+
+
+
 
 const steps = ['Basic Informations', 'Contact Details', 'Educational Details', 'Work Experience', 'Skills & Certificates', 'Review & Submit'];
 
@@ -20,6 +25,9 @@ function UserInputs({resumeDetails, setResumeDetails}) {
 
   // reference to skill input tag
   const skillRef = React.useRef();
+
+  // to navigate
+  const navigate = useNavigate();
 
   console.log(resumeDetails);
 
@@ -188,8 +196,22 @@ function UserInputs({resumeDetails, setResumeDetails}) {
       alert("Please fill the form Completely ....")
     }else{
       console.log("API Calll");
+      try{
+        const result = await addresumeAPI(resumeDetails)
+        console.log(result);
+        if(result.status==201){
+          alert("Resume Added Successfully!!!")
+          const {id} =result.data
+          //sucess redirect view page
+          navigate(`/resume/${id}/view`)
+        }
+      }catch(error){
+          console.log(error);
+          
+        }
+      }
       
-    }
+    
   }
 
   return (
