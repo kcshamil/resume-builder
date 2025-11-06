@@ -7,7 +7,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import { FaXmark } from "react-icons/fa6";
-// import { duration } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { addresumeAPI } from '../services/allAPI';
 
@@ -168,11 +167,8 @@ function UserInputs({resumeDetails, setResumeDetails}) {
                 <p className='fw-bolder'>No Skills are added yet!!!</p>
             }
           </div>
-
           <div>
-
           </div>
-
         </div>
 
       )
