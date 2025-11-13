@@ -6,7 +6,7 @@ export const addresumeAPI = async (resume)=>{
     return await commonAPI(`${ServerURL}/resumes`,"POST",resume);
 }
 
-//get  resumes api 
+//get  resumes api - called from ViewResume , when page load(), inside useeffect hook
 
 export const getResumeAPI = async (id)=>{
     return await commonAPI(`${ServerURL}/resumes/${id}`,"GET",{})
@@ -19,8 +19,14 @@ export const updateResumeAPI = async (id,resume)=>{
 export const addHistoryAPI = async (history)=>{
     return await commonAPI(`${ServerURL}/history/`,"POST",history)
 }
-// get history api
+// get history api - called from history component , when page load(), inside useeffect hook
+export const getHistoryAPI = async ()=>{
+    return await commonAPI(`${ServerURL}/history`,"GET",{})
+}
 //remove history api 
+export const removeHistoryAPI = async (id)=>{
+    return await commonAPI(`${ServerURL}/history/${id}`,"DELETE",{})
+}
 
 
 
